@@ -1,0 +1,119 @@
+/* master css */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* @import "reset"; */
+/* variables */
+/* mixins */
+/* function */
+a {
+  text-decoration: underline;
+}
+a:hover, .button, .button-red {
+  text-decoration: none;
+}
+.super-link a {
+  color: #665;
+}
+
+body {
+  background: #ccc;
+  color: #000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #463838;
+}
+h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
+  color: #ff0;
+}
+
+.button, .button-red {
+  background-color: #ddd;
+  color: #000;
+}
+
+.button-red {
+  background-color: red;
+}
+
+.container {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #00f;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  width: 90%;
+  max-width: 980px;
+  -webkit-box-shadow: 0 0 3px #999, inset 3px 3px 3px #333;
+  -moz-box-shadow: 0 0 3px #999, inset 3px 3px 3px #333;
+  box-shadow: 0 0 3px #999, inset 3px 3px 3px #333;
+  margin: 0 auto;
+}
+.container p {
+  color: #333;
+  margin: 96px;
+}
+
+.box, .bigger-box, .huge-box {
+  padding: 1em;
+  background-color: aquamarine;
+}
+
+.huge-box {
+  padding: 2em;
+}

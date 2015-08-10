@@ -1,0 +1,118 @@
+/* master css */
+
+@import "compass/reset";
+@import "compass/css3";
+    
+/* @import "reset"; */
+
+/* variables */
+$header-color: #463838;
+$header-span-color: #ff0;
+$pre-color: #333;
+$fonts: sans-serif;
+$link-color: #888;
+
+
+/* mixins */
+@mixin border-radios($radius: 10px) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin box-shadow($args...) {
+    -webkit-box-shadow: $args;
+    -moz-box-shadow: $args;
+    box-shadow: $args;
+}
+
+
+@mixin maxwidth {
+    width: 90%;
+    max-width: 980px;
+}
+
+
+/* function */
+$base-font-size: 16;
+
+@function global-margin($pfs) {
+    @return ($pfs * 3) * 2 + px;
+}
+
+
+a {
+    text-decoration: underline;
+    
+    &:hover {
+        text-decoration: none;
+    }
+    .super-link & {
+        color: #665;
+    }
+}
+
+body {
+    background: #ccc;
+    color: #000;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    color: $header-color;
+    
+    span {
+        color: $header-span-color;
+    }
+}
+
+.button {
+    background-color: #ddd;
+    color: #000;
+    
+    @extend a:hover;
+}
+.button-red {
+    @extend .button;
+    
+    background-color: red;
+}
+
+.container {
+    border: {
+        width: 1px;
+        style: solid;
+        color: #00f;
+        
+    }
+    @include border-radios(6px);
+    @include maxwidth;
+    @include box-shadow(0 0 3px #999, inset 3px 3px 3px #333);
+    margin: 0 auto;
+    
+    p {
+        color: $pre-color;
+        margin: global-margin($base-font-size);
+    }
+}
+
+
+.box {
+    padding: 1em;
+    background-color: aquamarine;
+}
+
+.bigger-box {
+    @extend .box;
+}
+
+.huge-box {
+    @extend .bigger-box;
+    
+    padding: 2em;
+}
+
+
+
+
+
