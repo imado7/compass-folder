@@ -1,8 +1,8 @@
 /* master css */
 
-@import "compass/reset";
-@import "compass/css3";
-    
+/* @import "compass/reset"; */
+/* @import "compass/css3"; */
+
 /* @import "reset"; */
 
 /* variables */
@@ -14,7 +14,7 @@ $link-color: #888;
 
 
 /* mixins */
-@mixin border-radios($radius: 10px) {
+@mixin border-radius($radius: 10px) {
     -webkit-border-radius: $radius;
     -moz-border-radius: $radius;
     border-radius: $radius;
@@ -43,7 +43,7 @@ $base-font-size: 16;
 
 a {
     text-decoration: underline;
-    
+
     &:hover {
         text-decoration: none;
     }
@@ -60,7 +60,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     color: $header-color;
-    
+
     span {
         color: $header-span-color;
     }
@@ -69,12 +69,12 @@ h1, h2, h3, h4, h5, h6 {
 .button {
     background-color: #ddd;
     color: #000;
-    
+
     @extend a:hover;
 }
 .button-red {
     @extend .button;
-    
+
     background-color: red;
 }
 
@@ -83,13 +83,13 @@ h1, h2, h3, h4, h5, h6 {
         width: 1px;
         style: solid;
         color: #00f;
-        
+
     }
-    @include border-radios(6px);
+    @include border-radius(6px);
     @include maxwidth;
     @include box-shadow(0 0 3px #999, inset 3px 3px 3px #333);
     margin: 0 auto;
-    
+
     p {
         color: $pre-color;
         margin: global-margin($base-font-size);
@@ -108,11 +108,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .huge-box {
     @extend .bigger-box;
-    
+
     padding: 2em;
 }
-
-
-
-
-
