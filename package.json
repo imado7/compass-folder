@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/imado7/compass-folder/issues"
   },
-  "homepage": "https://github.com/imado7/compass-folder"
+  "homepage": "https://github.com/imado7/compass-folder",
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  }
 }
